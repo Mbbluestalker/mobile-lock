@@ -101,7 +101,7 @@ const AddCustomerModal = ({ onClose, onAdd, showToast }) => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-3 py-1.5 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm ${
+              className={`w-full px-3 py-1.5 border rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm ${
                 errors.name ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Enter customer's full name"
@@ -120,7 +120,7 @@ const AddCustomerModal = ({ onClose, onAdd, showToast }) => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-3 py-1.5 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm ${
+              className={`w-full px-3 py-1.5 border rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm ${
                 errors.email ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="customer@example.com"
@@ -139,7 +139,7 @@ const AddCustomerModal = ({ onClose, onAdd, showToast }) => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className={`w-full px-3 py-1.5 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm ${
+              className={`w-full px-3 py-1.5 border rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm ${
                 errors.phone ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="+234 801 234 5678"
@@ -158,7 +158,7 @@ const AddCustomerModal = ({ onClose, onAdd, showToast }) => {
               name="joinDate"
               value={formData.joinDate}
               onChange={handleChange}
-              className="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm"
+              className="w-full px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm"
             />
           </div>
 

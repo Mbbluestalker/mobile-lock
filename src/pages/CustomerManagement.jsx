@@ -26,7 +26,7 @@ const CustomerManagement = () => {
     const colors = {
       'Active': 'text-green-600 bg-green-100',
       'Overdue': 'text-orange-600 bg-orange-100',
-      'Completed': 'text-blue-600 bg-blue-100'
+      'Completed': 'text-amber-600 bg-amber-100'
     }
     return colors[status] || 'text-gray-600 bg-gray-100'
   }
@@ -75,7 +75,7 @@ const CustomerManagement = () => {
             placeholder="Search by name, email, or phone..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-9 pr-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm"
+            className="w-full pl-9 pr-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm"
           />
         </div>
       </div>
@@ -84,7 +84,7 @@ const CustomerManagement = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
           <p className="text-xs text-gray-600 font-medium">Total Customers</p>
-          <p className="text-2xl font-bold text-blue-600 mt-1">{customers.length}</p>
+          <p className="text-2xl font-bold text-amber-600 mt-1">{customers.length}</p>
         </div>
         <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
           <p className="text-xs text-gray-600 font-medium">Active Customers</p>
@@ -100,7 +100,7 @@ const CustomerManagement = () => {
         </div>
         <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
           <p className="text-xs text-gray-600 font-medium">Total Devices</p>
-          <p className="text-2xl font-bold text-purple-600 mt-1">
+          <p className="text-2xl font-bold text-amber-600 mt-1">
             {customers.reduce((sum, c) => sum + c.devicesOwned, 0)}
           </p>
         </div>
@@ -117,7 +117,7 @@ const CustomerManagement = () => {
             {/* Customer Header */}
             <div className="flex items-start justify-between mb-3">
               <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-yellow-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-sm">
                     {customer.name.split(' ').map(n => n[0]).join('')}
                   </span>
@@ -157,11 +157,11 @@ const CustomerManagement = () => {
             <div className="grid grid-cols-2 gap-3 pt-3 border-t border-gray-200">
               <div>
                 <p className="text-xs text-gray-500">Active Loans</p>
-                <p className="text-xl font-bold text-blue-600">{customer.activeLoans}</p>
+                <p className="text-xl font-bold text-amber-600">{customer.activeLoans}</p>
               </div>
               <div>
                 <p className="text-xs text-gray-500">Devices Owned</p>
-                <p className="text-xl font-bold text-purple-600">{customer.devicesOwned}</p>
+                <p className="text-xl font-bold text-amber-600">{customer.devicesOwned}</p>
               </div>
             </div>
 
@@ -227,7 +227,7 @@ const CustomerDetailsModal = ({ customer, onClose, navigate }) => {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-t-lg">
+        <div className="bg-gradient-to-r from-amber-500 to-yellow-500 text-white p-4 rounded-t-lg">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
@@ -237,7 +237,7 @@ const CustomerDetailsModal = ({ customer, onClose, navigate }) => {
               </div>
               <div>
                 <h2 className="text-xl font-bold">{customer.name}</h2>
-                <p className="text-blue-100 text-sm">Customer Profile</p>
+                <p className="text-amber-100 text-sm">Customer Profile</p>
               </div>
             </div>
             <button
@@ -258,7 +258,7 @@ const CustomerDetailsModal = ({ customer, onClose, navigate }) => {
             <h3 className="font-bold text-gray-900 text-base mb-3">Contact Information</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div className="flex items-center space-x-2 p-2.5 bg-gray-50 rounded-lg">
-                <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <div>
@@ -267,7 +267,7 @@ const CustomerDetailsModal = ({ customer, onClose, navigate }) => {
                 </div>
               </div>
               <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <div>
@@ -276,7 +276,7 @@ const CustomerDetailsModal = ({ customer, onClose, navigate }) => {
                 </div>
               </div>
               <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 <div>
@@ -285,7 +285,7 @@ const CustomerDetailsModal = ({ customer, onClose, navigate }) => {
                 </div>
               </div>
               <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <div>
@@ -303,8 +303,8 @@ const CustomerDetailsModal = ({ customer, onClose, navigate }) => {
               {customerDevices.map((device) => (
                 <div key={device.id} className="flex items-center justify-between p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -324,7 +324,7 @@ const CustomerDetailsModal = ({ customer, onClose, navigate }) => {
                         onClose()
                         navigate('/devices')
                       }}
-                      className="text-blue-600 hover:text-blue-700"
+                      className="text-amber-600 hover:text-amber-700"
                     >
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -349,7 +349,7 @@ const CustomerDetailsModal = ({ customer, onClose, navigate }) => {
                     </div>
                     <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
                       loan.paymentStatus === 'Paid' ? 'bg-green-100 text-green-700' :
-                      loan.paymentStatus === 'Active' ? 'bg-blue-100 text-blue-700' :
+                      loan.paymentStatus === 'Active' ? 'bg-amber-100 text-amber-700' :
                       loan.paymentStatus === 'Overdue' ? 'bg-orange-100 text-orange-700' :
                       'bg-red-100 text-red-700'
                     }`}>

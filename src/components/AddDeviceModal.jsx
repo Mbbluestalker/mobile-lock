@@ -209,7 +209,7 @@ const AddDeviceModal = ({ onClose, onAdd, showToast }) => {
                 name="customerId"
                 value={formData.customerId}
                 onChange={handleChange}
-                className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none ${
+                className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none ${
                   errors.customerId ? 'border-red-500' : 'border-gray-300'
                 }`}
               >
@@ -238,7 +238,7 @@ const AddDeviceModal = ({ onClose, onAdd, showToast }) => {
                   name="model"
                   value={formData.model}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none ${
+                  className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none ${
                     errors.model ? 'border-red-500' : 'border-gray-300'
                   }`}
                 >
@@ -261,7 +261,7 @@ const AddDeviceModal = ({ onClose, onAdd, showToast }) => {
                   name="osVersion"
                   value={formData.osVersion}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none ${
+                  className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none ${
                     errors.osVersion ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="e.g., Android 14, iOS 17"
@@ -281,7 +281,7 @@ const AddDeviceModal = ({ onClose, onAdd, showToast }) => {
                     name="imei"
                     value={formData.imei}
                     onChange={handleChange}
-                    className={`flex-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none ${
+                    className={`flex-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none ${
                       errors.imei ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="15-digit IMEI number"
@@ -309,7 +309,7 @@ const AddDeviceModal = ({ onClose, onAdd, showToast }) => {
                     name="serialNumber"
                     value={formData.serialNumber}
                     onChange={handleChange}
-                    className={`flex-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none ${
+                    className={`flex-1 px-4 py-2 border rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none ${
                       errors.serialNumber ? 'border-red-500' : 'border-gray-300'
                     }`}
                     placeholder="Device serial number"
@@ -343,7 +343,7 @@ const AddDeviceModal = ({ onClose, onAdd, showToast }) => {
                   name="amountFinanced"
                   value={formData.amountFinanced}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none ${
+                  className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none ${
                     errors.amountFinanced ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="150000"
@@ -361,7 +361,7 @@ const AddDeviceModal = ({ onClose, onAdd, showToast }) => {
                   name="duration"
                   value={formData.duration}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none ${
+                  className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none ${
                     errors.duration ? 'border-red-500' : 'border-gray-300'
                   }`}
                 >
@@ -384,7 +384,7 @@ const AddDeviceModal = ({ onClose, onAdd, showToast }) => {
                   name="interestRate"
                   value={formData.interestRate}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none"
                   step="0.1"
                 />
               </div>
@@ -416,7 +416,7 @@ const AddDeviceModal = ({ onClose, onAdd, showToast }) => {
                   name="purchaseDate"
                   value={formData.purchaseDate}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none"
                 />
               </div>
             </div>

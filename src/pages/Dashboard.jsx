@@ -15,8 +15,8 @@ const Dashboard = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       ),
-      gradient: 'from-blue-500 to-indigo-600',
-      bgLight: 'bg-blue-50',
+      gradient: 'from-amber-500 to-yellow-500',
+      bgLight: 'bg-amber-50',
       change: '+12%',
       changePositive: true
     },
@@ -54,8 +54,8 @@ const Dashboard = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
       ),
-      gradient: 'from-purple-500 to-pink-600',
-      bgLight: 'bg-purple-50',
+      gradient: 'from-amber-500 to-yellow-500',
+      bgLight: 'bg-amber-50',
       change: '+15%',
       changePositive: true
     },
@@ -84,7 +84,7 @@ const Dashboard = () => {
         </svg>
       ),
       path: '/devices',
-      gradient: 'from-blue-500 to-indigo-600'
+      gradient: 'from-amber-500 to-yellow-500'
     },
     {
       title: 'Manage Loans',
@@ -106,7 +106,7 @@ const Dashboard = () => {
         </svg>
       ),
       path: '/customers',
-      gradient: 'from-purple-500 to-pink-600'
+      gradient: 'from-amber-500 to-yellow-500'
     },
     {
       title: 'Generate Reports',
@@ -128,7 +128,7 @@ const Dashboard = () => {
         <div className="absolute top-0 right-0 w-48 h-48 bg-white opacity-5 rounded-full -mr-24 -mt-24"></div>
         <div className="relative z-10">
           <h1 className="text-2xl font-bold mb-1">Welcome back, Admin! 👋</h1>
-          <p className="text-indigo-100 text-sm">Here's what's happening with your device financing today</p>
+          <p className="text-amber-100 text-sm">Here's what's happening with your device financing today</p>
         </div>
       </div>
 
@@ -194,7 +194,7 @@ const Dashboard = () => {
                 <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
                   activity.action === 'Lock Device' ? 'gradient-danger' :
                   activity.action === 'Unlock Device' ? 'gradient-success' :
-                  activity.action === 'Loan Created' ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
+                  activity.action === 'Loan Created' ? 'bg-gradient-to-br from-amber-500 to-yellow-500' :
                   'bg-gradient-to-br from-gray-400 to-gray-500'
                 }`}>
                   {activity.action === 'Lock Device' ? (
@@ -217,7 +217,7 @@ const Dashboard = () => {
                     <span className={`px-2 py-0.5 text-xs font-semibold rounded-md ${
                       activity.action === 'Lock Device' ? 'bg-red-100 text-red-700' :
                       activity.action === 'Unlock Device' ? 'bg-green-100 text-green-700' :
-                      activity.action === 'Loan Created' ? 'bg-blue-100 text-blue-700' :
+                      activity.action === 'Loan Created' ? 'bg-amber-100 text-amber-700' :
                       'bg-gray-100 text-gray-700'
                     }`}>
                       {activity.action}

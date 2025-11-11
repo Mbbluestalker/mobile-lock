@@ -58,7 +58,7 @@ const DeviceManagement = () => {
   const getLoanStatusBadge = (status) => {
     const badges = {
       'Paid': 'bg-green-100 text-green-700',
-      'Active': 'bg-blue-100 text-blue-700',
+      'Active': 'bg-amber-100 text-amber-700',
       'Overdue': 'bg-orange-100 text-orange-700',
       'Defaulted': 'bg-red-100 text-red-700'
     }
@@ -114,7 +114,7 @@ const DeviceManagement = () => {
                 placeholder="Search by customer, device model, or IMEI..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 pr-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm"
+                className="w-full pl-9 pr-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm"
               />
             </div>
           </div>
@@ -124,7 +124,7 @@ const DeviceManagement = () => {
             <select
               value={filterStatus}
               onChange={(e) => setFilterStatus(e.target.value)}
-              className="px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm"
+              className="px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm"
             >
               <option value="all">All Devices</option>
               <option value="active">Active Only</option>
@@ -168,8 +168,8 @@ const DeviceManagement = () => {
                 <tr key={device.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-4 py-3">
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                        <span className="text-blue-600 font-semibold text-sm">
+                      <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center">
+                        <span className="text-amber-600 font-semibold text-sm">
                           {device.customerName.split(' ').map(n => n[0]).join('')}
                         </span>
                       </div>
@@ -229,7 +229,7 @@ const DeviceManagement = () => {
                       )}
                       <button
                         onClick={() => handleViewDetails(device)}
-                        className="p-1.5 text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
+                        className="p-1.5 text-amber-600 hover:bg-amber-50 rounded-md transition-colors"
                         title="View Details"
                       >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

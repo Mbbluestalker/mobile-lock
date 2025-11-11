@@ -10,7 +10,7 @@ const LoanManagement = () => {
   const getStatusBadge = (status) => {
     const badges = {
       'Paid': 'bg-green-100 text-green-700',
-      'Active': 'bg-blue-100 text-blue-700',
+      'Active': 'bg-amber-100 text-amber-700',
       'Overdue': 'bg-orange-100 text-orange-700',
       'Defaulted': 'bg-red-100 text-red-700'
     }
@@ -63,7 +63,7 @@ const LoanManagement = () => {
                 placeholder="Search by loan ID, customer, or device..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-9 pr-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm"
+                className="w-full pl-9 pr-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm"
               />
             </div>
           </div>
@@ -73,7 +73,7 @@ const LoanManagement = () => {
             <select
               value={filterStatus}
               onChange={(e) => setFilterStatus(e.target.value)}
-              className="px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-sm"
+              className="px-3 py-1.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none text-sm"
             >
               <option value="all">All Loans</option>
               <option value="active">Active</option>
@@ -89,7 +89,7 @@ const LoanManagement = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
           <p className="text-xs text-gray-600 font-medium">Total Loans</p>
-          <p className="text-2xl font-bold text-blue-600 mt-1">{loans.length}</p>
+          <p className="text-2xl font-bold text-amber-600 mt-1">{loans.length}</p>
         </div>
         <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
           <p className="text-xs text-gray-600 font-medium">Active Loans</p>
@@ -105,7 +105,7 @@ const LoanManagement = () => {
         </div>
         <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
           <p className="text-xs text-gray-600 font-medium">Total Financed</p>
-          <p className="text-xl font-bold text-purple-600 mt-1">
+          <p className="text-xl font-bold text-amber-600 mt-1">
             {formatCurrency(loans.reduce((sum, l) => sum + l.amountFinanced, 0))}
           </p>
         </div>
@@ -151,8 +151,8 @@ const LoanManagement = () => {
                   </td>
                   <td className="px-4 py-3">
                     <div className="flex items-center">
-                      <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                        <span className="text-purple-600 font-semibold text-sm">
+                      <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center">
+                        <span className="text-amber-600 font-semibold text-sm">
                           {loan.customerName.split(' ').map(n => n[0]).join('')}
                         </span>
                       </div>
@@ -183,7 +183,7 @@ const LoanManagement = () => {
                         <div
                           className={`h-1.5 rounded-full ${
                             loan.paymentStatus === 'Paid' ? 'bg-green-500' :
-                            loan.paymentStatus === 'Active' ? 'bg-blue-500' :
+                            loan.paymentStatus === 'Active' ? 'bg-amber-500' :
                             loan.paymentStatus === 'Overdue' ? 'bg-orange-500' :
                             'bg-red-500'
                           }`}
@@ -213,7 +213,7 @@ const LoanManagement = () => {
                     <div className="flex items-center space-x-1">
                       <button
                         onClick={() => navigate('/devices')}
-                        className="p-1.5 text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
+                        className="p-1.5 text-amber-600 hover:bg-amber-50 rounded-md transition-colors"
                         title="View Device"
                       >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -221,7 +221,7 @@ const LoanManagement = () => {
                         </svg>
                       </button>
                       <button
-                        className="p-1.5 text-purple-600 hover:bg-purple-50 rounded-md transition-colors"
+                        className="p-1.5 text-amber-600 hover:bg-amber-50 rounded-md transition-colors"
                         title="View Customer"
                         onClick={() => navigate('/customers')}
                       >
